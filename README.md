@@ -9,4 +9,4 @@
 
 #### Bibliografia Utilizada
 
-WICKHAM, Hadley. **Advanced** R. CRC Press, 2014.
+WICKHAM, Hadley. **Advanced R.** CRC Press, 2014.
