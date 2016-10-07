@@ -10,7 +10,7 @@
 #### Ferramentas
 
 - [R](https://cran.r-project.org/) (óbvio!)
-- [R Studio](https://www.rstudio.com/)
+- [RStudio](https://www.rstudio.com/)
 
 #### Bibliografia Utilizada
 
