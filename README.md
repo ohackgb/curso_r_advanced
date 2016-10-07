@@ -1,4 +1,6 @@
+![logo](logo.png)
 # Curso de R Avançado
+
 
 #### Conteúdo do Curso
 
