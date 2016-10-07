@@ -1,33 +1,46 @@
 ---
-title: "estruturas_de dados"
-output: ioslides_presentation
+title: "Estrutura de dados"
+date: "7 de outubro de 2016"
+output: beamer_presentation
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
+# Introdução
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- Por quê o R?
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+## O que você precisa saber
 
-## Slide with Bullets
+- RStudio
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Lógica de programação
 
-## Slide with R Output
 
-```{r cars, echo = TRUE}
-summary(cars)
-```
+## A quem esse curso é direcionado
 
-## Slide with Plot
+- Estudantes de Graduação em Ciência da Computação ou Estatístsica
 
-```{r pressure}
-plot(pressure)
-```
+- Profissionais da área de estatística computacional
+
+##Objetivos do curso
+
+ - Você sabe usar o R: *sim!*
+
+# Introdução
+
+##Ementa
+
+ - I - Introdução
+ 
+ 
+ 
+# 2. Estruturas de dados
+
+## 2.1. Vetores
+
+Funções usadas nesse capítulo 
 
