@@ -9,7 +9,7 @@
 
 #### Ferramentas
 
-- [R (óbvio!)](https://cran.r-project.org/)
+- [R](https://cran.r-project.org/) (óbvio!)
 - [R Studio](https://www.rstudio.com/)
 
 #### Bibliografia Utilizada
