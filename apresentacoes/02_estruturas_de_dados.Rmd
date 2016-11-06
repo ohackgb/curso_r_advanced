@@ -1,8 +1,7 @@
 ---
 title: "Estrutura de dados"
+output: ioslides_presentation
 date: "7 de outubro de 2016"
-output: beamer_presentation
-
 ---
 
 ```{r setup, include=FALSE}
@@ -11,26 +10,88 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Introdução
 
-- Por quê o R?
+## Objetivo
 
-## O que você precisa saber
+- Tornar-se um programador de R eficiente (rápido)
 
-- RStudio
+- Você sabe usar o R: *sim!*
 
-- Lógica de programação
-
-
+  - Familiaridade com os fundamentos do R
+  
+  - Compreensão de estruturas complexas de dados
+  
+  - Entendimento profundo sobre funções no R
+  
+  - Entender o que significa programação funcional
+  
+  - Saber tirar vantagem da metaprogramação do R
+  
+  - Otimização do uso do R: memória e execução em C++
+  
 ## A quem esse curso é direcionado
 
 - Estudantes de Graduação em Ciência da Computação ou Estatístsica
 
 - Profissionais da área de estatística computacional
 
-##Objetivos do curso
+- O que você deve saber
 
- - Você sabe usar o R: *sim!*
+  - Lógica de programação
+  
+  - Familiaridade com a família de funções apply()
 
-# Introdução
+##Por que o R
+
+- Grátis, open source, e multiplataforma
+
+    - Reprodutibilidade
+
+- Grande comunidade de desenvolvedores
+
+    - Disponibilidade de pacotes
+    
+    - Atualizações constantes
+    
+    - Muita ajuda disponível online
+    
+- Estruturas adaptadas para análise de dados
+
+    - indexação, dados missing, data frames...
+
+##Por que o R
+
+- Ferramentas para comunicação de resultados
+
+    - knitr, shiny, markdown...
+
+- A IDE RStudio
+
+- Elementos poderosos de metaprogramação
+
+    - vetorização, tamanhos flexíveis de objetos...
+
+- Interface com C e C++
+
+##Dificuldades do R
+
+A maior parte de quem escreve código em R não são programadores. Isso implica
+
+- Código não revisado, otimizado, ou elegante
+
+- Foco em resultado ao invés de processos
+
+    - Poucos 'desenvolvedores' de R utilizam testes automatizados
+
+- Metaprogramação: truques que podem dificultar entendimento à primeira vista
+
+- Inconsistências resultantes de 20 anos desse tipo de desenvolvimento
+
+- Uso de memória e velocidade de execução
+
+
+##Onde procurar ajuda
+
+- Google
 
 ##Ementa
 
@@ -40,7 +101,69 @@ knitr::opts_chunk$set(echo = FALSE)
  
 # 2. Estruturas de dados
 
+## 2. Estrutura de dados
+
+Um sumário de como as mais importantes estruturas de dados do R se encaixam num todo. 
+
+Uma taxonomia básica das estruturas do R as organiza quanto à sua dimensionalidade e homogeneidade
+
+-|Homogêneas|Heterogêneas
+--|--|--
+1D|Vector|List
+2D|Matrix|Data Frame
+nD|Array|
+
+Note que não há objetos 0-dimensionais no R.
+
+## 2. Estrutura de dados
+
+A melhor forma de conhecer a estrutura de um objeto em R é usando as funções `str()`, que produz um output compacto e compreensível
+
+```{r}
+
+a <- 1:3
+
+str(a)
+
+```
+
 ## 2.1. Vetores
 
-Funções usadas nesse capítulo 
+É a estrutura de dados básica do R, possuem dois tipos: **atomic vectors** e **lists**. 
+
+Eles possuem três características **em comum**
+
+- Tipo, `typeof()`, ou seja, o que é
+ 
+- Tamanho, `length()`, quantos elementos possui
+
+- Atributos, `attributes()`, metadados arbitrários adicionais
+
+E eles diferem quanto ao tipo de seus elementos, apenas o atomic vector requer que todos os seus elementos sejam do mesmo tipo.
+
+## 2.1. Vetores
+
+Para criar um objeto testar se um objeto é um vetor, utilizamos `is.atomic()` ou `is.list()`
+
+```{r}
+
+lista <- list(1, 2, 3)
+atomicVector <- c(1, 2, 3)
+
+is.atomic(lista)
+
+is.list(atomicVector)
+```
+
+##2.1.1. Atomic Vectors
+
+Existem quatro tipos principais de vetores atômicos: logical, integer, double (numeric) e character.
+
+
+
+```{r, echo = TRUE}
+
+vetor <- c(1, 4, 2, 6, 3)
+
+```
 
