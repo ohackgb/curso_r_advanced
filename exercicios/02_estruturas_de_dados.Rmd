@@ -1,5 +1,5 @@
 ---
-title: "estruturas_de_dados"
+title: "Exercícios Capítulo 2 - Estruturas de Dados"
 output: html_document
 ---
 
@@ -8,18 +8,80 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Vetores
+
+1.1 Quais são as três propriedades de um Vetor?
+
 ### Vetores Atômicos
+
+1.2 Quais são os quatro tipos mais comuns de Vetores Atômicos. Quais os dois tipos mais raros?
+
+1.3 Qual a saída dos seguintes comandos no R:
+
+```{R, echo=T, results='markup'}
+# Vetor 1
+c(2, 5, 'L')
+# Vetor 2
+c(1L, 5, 4)
+# Vetor 3
+c(T, T, F, 1)
+# Vetor 4
+c('T', T, T, F, 1)
+```
+
 #### Tipos e testes
+
+1.4 Qual a classe de cada um dos quatro Vetores do exercicio 1.3?
+
+1.5 Como testar se um vetor é de um determinado tipo de dado?
+
 #### Coerção
+
+1.6 Converta cada um dos Vetores do exercício 1.3 para as classes lógico, numérico e caracter e informe qual a saída apresentada no R.
+
 ### Listas
 
+1.7 Qual a diferença entre uma Lista e um Vetor?
+
+1.8 Como saber se um objeto no R é uma lista?
+
+
 ## Atributos
+
+1.9 que são atributos. Como adicionar atributos a um objeto? Como saber quais atributos existem em um objeto? Como extraír um determinado atributo?
+
+1.10 Quais são os três atributos mais importantes?
+
 #### Nomes
+
+1.11 Quais são as três formas de acessar o atributo nome?
+
 ###Fatores
 
-## Matrizes e arays
+1.12 Converta o vetor abaixo para fator:
+```{R, echo=T, results='hide'}
+sex_char <- c("m", "m", "m")
+```
+
+1.13 Qual a classe da variável lida no trecho de código abaixo? Como converte-la para numérico?
+```{R, echo=T, results='hide'}
+z <- read.csv(text = "value\n12\n1\n.\n9")
+z <- z$value
+```
+
+## Matrizes e Array
+
+1.14 Crie uma matriz de 10 linhas e 10 colunas com o número 0 em todas as células.
+
+1.15 Utilizando funções do R, imprima quantas linhas e quantas colunas tem a matriz recém criada.
+
+1.16 Crie outra matriz de 10  linhas e 1 coluna, junte a matriz criada anteriormente, formando uma matriz de 10 linhas e 11 colunas.
+
+1.17 Repita o passo anterior, mas agora crie uma matriz de 1 linha e 11 colunas e junte a matriz criada em 1.16, finalizando com uma matriz de 11 linhas e 11 colunas.
 
 ## Data frames
+
+1. Quais atributos um *Data Frame* possui?
+
 ### Criação
 ### Teste e coerção
 ### Combinando dataframes
