@@ -7,22 +7,42 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Tipos de Dados
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+### Vetores Atomicos
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+1.1 Quais são os três principais operadores de subsetting para vetores atômicos?
 
-```{r cars}
-summary(cars)
+1.2 Dado o vetor abaixo: 
+
+```
+x <- c(2,7,8,1,9,3,6,4)
 ```
 
-## Including Plots
+1.2.1 Extraia os números 1, 2 e 3 utilizando inteiros positivos.
 
-You can also embed plots, for example:
+1.2.2 Extraia os números 1, 2 e 3 utilizando inteiros negativos.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+1.2.3 Extraia os números 1, 2 e 3 utilizando um vetor lógico.
+
+1.3 Utilizando um vetor lógico, extraia todos os números pares da sequência 1:100.
+
+### Listas
+
+### Matrizes e arrays
+
+1. Construa uma função que extraia a diagonal principal de uma matriz.
+
+### Data frames
+
+1.4 Conserte cada um dos erros de subsetting de data frame abaixo.
+```
+mtcars[mtcars$cyl = 4, ]
+mtcars[-1:4, ]
+mtcars[mtcars$cyl <= 5]
+mtcars[mtcars$cyl == 4 | 6, ]
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+1.5 Por que mtcars[1:20] retorna erro? Qual a diferença entre mtcars[1:20] e mtcars[1:20,]?
+
+1.6 O que df[is.na(df)] <- 0 faz? Como ele funciona?
