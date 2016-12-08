@@ -38,31 +38,41 @@ c('T', T, T, F, 1)
 
 1.6 Converta cada um dos Vetores do exercício 1.3 para as classes lógico, numérico e caracter e informe qual a saída apresentada no R.
 
+1.7 Por que 1 == "1" é verdadeiro? Por que -1 < FALSE é verdadeiro? Por que "one" < 2 é falso?
+
 ### Listas
 
-1.7 Qual a diferença entre uma Lista e um Vetor?
+1.8 Qual a diferença entre uma Lista e um Vetor?
 
-1.8 Como saber se um objeto no R é uma lista?
+1.9 Como saber se um objeto no R é uma lista?
 
+1.10 Por que precisamos usar unlist() para converter uma lista em um vetor atômico? Por que não usar as.vector()?
 
 ## Atributos
 
-1.9 que são atributos. Como adicionar atributos a um objeto? Como saber quais atributos existem em um objeto? Como extraír um determinado atributo?
+1.11 O que são atributos? Como adicionar atributos a um objeto? Como saber quais atributos existem em um objeto? Como extraír um determinado atributo?
 
-1.10 Quais são os três atributos mais importantes?
+1.12 Quais são os três atributos mais importantes?
 
 #### Nomes
 
-1.11 Quais são as três formas de acessar o atributo nome?
+1.13 Quais são as três formas de modificar o atributo nome?
 
 ###Fatores
 
-1.12 Converta o vetor abaixo para fator:
+1.14 Converta o vetor abaixo para fator:
 ```{R, echo=T, results='hide'}
 sex_char <- c("m", "m", "m")
 ```
 
-1.13 Qual a classe da variável lida no trecho de código abaixo? Como converte-la para numérico?
+1.15 Qual o resultado dos comandos abaixo?
+```{R, echo=T, results='hide'}
+sex <- factor("m", "m", "f")
+
+sex[4] <- "d"
+```
+
+1.16 Qual a classe da variável lida no trecho de código abaixo? Como converte-la para numérico?
 ```{R, echo=T, results='hide'}
 z <- read.csv(text = "value\n12\n1\n.\n9")
 z <- z$value
@@ -70,21 +80,55 @@ z <- z$value
 
 ## Matrizes e Array
 
-1.14 Crie uma matriz de 10 linhas e 10 colunas com o número 0 em todas as células.
+1.17 Crie uma matriz de 10 linhas e 10 colunas com o número 0 em todas as células.
 
-1.15 Utilizando funções do R, imprima quantas linhas e quantas colunas tem a matriz recém criada.
+1.18 Utilizando funções do R, imprima quantas linhas e quantas colunas tem a matriz recém criada.
 
-1.16 Crie outra matriz de 10  linhas e 1 coluna, junte a matriz criada anteriormente, formando uma matriz de 10 linhas e 11 colunas.
+1.19 Crie outra matriz de 10  linhas e 1 coluna, junte a matriz criada anteriormente, formando uma matriz de 10 linhas e 11 colunas.
 
-1.17 Repita o passo anterior, mas agora crie uma matriz de 1 linha e 11 colunas e junte a matriz criada em 1.16, finalizando com uma matriz de 11 linhas e 11 colunas.
+1.20 Repita o passo anterior, mas agora crie uma matriz de 1 linha e 11 colunas e junte a matriz criada em 1.16, finalizando com uma matriz de 11 linhas e 11 colunas.
 
 ## Data frames
 
-1. Quais atributos um *Data Frame* possui?
+1.21 Quais atributos um *Data Frame* possui?
+
+1.22 Uma lista pode ser uma matriz? Um data frame pode ter uma coluna que é uma matriz?
+
+1.23 É possível ter um data frame com 0 linhas? E é possível ter um data frame com 0 colunas? 
 
 ### Criação
+
+1.24  Crie um data frame com três colunas com os nomes "a", "b", "c". O data frame deve ter três linhas e a coluna "a" deve ser do tipo string.
+
+1.25 Use a função class() para imprimir a classe da coluna "a" do data frame criado no exercício anterior para confirmar se a coluna criada é do tipo string.
+
 ### Teste e coerção
+
+1.26 Converta cada um dos objetos abaixo em um data frame. Explique os resultados.
+```{R, echo=T, results='hide'}
+
+vet <- c(1,2,3,4,5,6)
+
+list_c <- list(c(1,3,5), c(2,4,6))
+
+list_e <- list(c(1,3,5), c(2,4))
+
+mat <- matrix(c(1,2,3,4,5,6), 2, 3)
+
+```
+
+1.27 O que o comando as.matrix() faz quando aplicado a um data frame com colunas de diferentes tipos?
+
 ### Combinando dataframes
+
+1.28 Quais as funções utilizadas para combinar data frames? Quais são os pré-requisitos para que essas funções funcionem de maneira correta?
+
 ### Colunas especiais
 
 
+1.29 Qual o comportamento esperado do comando abaixo? Por que isso acontece e como contornar?
+```
+data.frame(x = 1:3, y = list(1:2, 1:3, 1:4))
+```
+
+1.30 Quais são os tipos possíveis de colunas especiais?
